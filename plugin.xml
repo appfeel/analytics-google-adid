@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.analytics.adid.google" version="1.0.8">
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  <name>Google Analytics Plugin with Advertising Id</name>
+  <description>Google Analytics Phonegap, Cordova, Intel XDK plugin for iOS/Android with Advertising Id Collection enabled</description>
+  <author email="info@appfeel.com" href="https://github.com/appfeel/admob-google-cordova">AppFeel</author>
+  <license>MIT</license>
+  <keywords>analytics,google,metrics,event,screen,ua,universal analytics,universal,referral,download,install</keywords>
+  <repo>https://github.com/appfeel/analytics-google-idfa.git</repo>
+  <issue>https://github.com/appfeel/analytics-google-idfa/issues</issue>
+  
+  
+  <dependency id="com.analytics.google" />
+  
+  
+  <js-module src="www/analytics.js" name="GAPluginAdId">
+    <merges target="analytics" />
+  </js-module>
+  
+  
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="GAPluginAdId">
+        <param name="android-package" value="com.appfeel.cordova.analytics.adid.CPGoogleAnalyticsAdId" />
+      </feature>
+    </config-file>
+    <source-file src="src/android/CPGoogleAnalyticsAdId.java" target-dir="src/com/appfeel/cordova/analytics/adid" />
+  </platform>
+  
+  
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="GAPluginAdId">
+        <param name="ios-package" value="CDVGoogleAnalyticsAdId" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/CDVGoogleAnalyticsAdId.h" />
+    <source-file src="src/ios/CDVGoogleAnalyticsAdId.m" />
+
+    <source-file src="src/ios/libAdIdAccess.a" framework="true" />
+    
+    <framework src="AdSupport.framework" />
+  </platform>
+</plugin>
