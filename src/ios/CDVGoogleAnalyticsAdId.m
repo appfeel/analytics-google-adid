@@ -52,18 +52,20 @@
 }
 
 - (void) getAdId: (CDVInvokedUrlCommand*)command {
-    NSString *result = nil;
-    CDVPluginResult* pluginResult = nil;
-    
-    if ([self _getAdId:&result] == 0) {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
-                                         messageAsString:result];
-    } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
-                                         messageAsString:result];
-    }
-    
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    [self.commandDelegate runInBackground:^{
+        NSString *result = nil;
+        CDVPluginResult* pluginResult = nil;
+        
+        if ([self _getAdId:&result] == 0) {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
+                                             messageAsString:result];
+        } else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR
+                                             messageAsString:result];
+        }
+        
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }];
 }
 
 - (int) _getAdId: (NSString**)aid {

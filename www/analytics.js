@@ -31,5 +31,5 @@ analytics.startAdIdTrackerWithId = function(id, success, error) {
 };
 
 analytics.getAdId = function(success, error) {
-  cordova.exec(success, error, 'GAPluginAdId', 'adId', []);
+  cordova.exec(success, error, 'GAPluginAdId', 'getAdId', []);
 }
