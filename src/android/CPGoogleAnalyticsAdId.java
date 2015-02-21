@@ -82,7 +82,7 @@ public class CPGoogleAnalyticsAdId extends CordovaPlugin {
   }
 
   private PluginResult execGetAdId(final CallbackContext callbackContext) {
-    cordova.getActivity().runOnUiThread(new Runnable() {
+    cordova.getThreadPool().execute(new Runnable() {
       @Override
       public void run() {
         AdvertisingIdClient.Info advId;
