@@ -24,7 +24,7 @@
  SOFTWARE.
  */
 
-var analytics = module.exports;
+var analytics = window.analytics || {};
 
 analytics.startAdIdTrackerWithId = function(id, success, error) {
   cordova.exec(success, error, 'GAPluginAdId', 'startAdIdTrackerWithId', [id]);
@@ -33,3 +33,5 @@ analytics.startAdIdTrackerWithId = function(id, success, error) {
 analytics.getAdId = function(success, error) {
   cordova.exec(success, error, 'GAPluginAdId', 'getAdId', []);
 }
+
+window.analytics = analytics;
