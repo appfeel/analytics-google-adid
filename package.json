@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-analytics-adid",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Google Analytics Phonegap, Cordova, Intel XDK plugin for iOS/Android with Advertising Id Collection enabled",
   "cordova": {
     "id": "cordova-plugin-analytics-adid",
