@@ -1,0 +1,44 @@
+{
+  "name": "cordova-plugin-analytics-adid",
+  "version": "1.1.0",
+  "description": "Google Analytics Phonegap, Cordova, Intel XDK plugin for iOS/Android with Advertising Id Collection enabled",
+  "cordova": {
+    "id": "cordova-plugin-analytics-adid",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appfeel/analytics-google-adid.git"
+  },
+  "keywords": [
+    "analytics",
+    "google",
+    "metrics",
+    "event",
+    "screen",
+    "ua",
+    "universal analytics",
+    "universal",
+    "referral",
+    "download",
+    "install",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "AppFeel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/appfeel/analytics-google-adid/issues"
+  },
+  "homepage": "https://github.com/appfeel/analytics-google-adid#readme"
+}
