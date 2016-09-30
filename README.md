@@ -44,7 +44,5 @@ Start Analtytics tracker with advertising id collection enabled:
 #### getAdId(success, error);
 Gets the advertising id (IDFA).
 
-* {String}     screenName: (Required) the name of the screen to track.
-* {Object}     options:    (Optional) JSON object with additional options ([see options](#options)).
 * {function()} success:    (Optional) success callback with advertising id (IDFA) as string argument.
 * {function()} failure:    (Optional) failure callback.
