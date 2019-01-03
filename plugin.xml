@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-analytics-adid" version="1.5.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-analytics-adid" version="1.5.1">
   <engines>
     <engine name="cordova" version=">=3.0.0" />
   </engines>
@@ -12,7 +12,7 @@
   <issue>https://github.com/appfeel/analytics-google-idfa/issues</issue>
   
   
-  <dependency id="cordova-plugin-analytics" />
+  <dependency id="cordova-plugin-analytics" commit="4c67c1255d29da8099d4c6500d4e210df998f08e"/>
   
   
   <js-module src="www/analytics.js" name="GAPluginAdId">
