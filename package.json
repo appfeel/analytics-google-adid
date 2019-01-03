@@ -29,12 +29,10 @@
     "cordova-android",
     "cordova-ios"
   ],
-  "engines": [
-    {
-      "name": "cordova",
-      "version": ">=3.0.0"
-    }
-  ],
+  "engines": {
+    "name": "cordova",
+    "version": ">=3.0.0"
+  },
   "author": "AppFeel",
   "license": "MIT",
   "bugs": {
